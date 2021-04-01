@@ -1,12 +1,12 @@
 /*
-	PROJETO PARA CALCULAR UM VALOR ALEATÓRIO NA JOGADA DE UM DADO DE 6 LADOS(PONTOS).
+	PROJETO PARA CALCULAR UM VALOR ALEATÃ“RIO NA JOGADA DE UM DADO DE 6 LADOS(PONTOS).
 */
 
 #include<iostream>
 #include<locale.h>
 #include<string.h>
 #include<cstdlib>
-#include<ctime.>
+#include<ctime.h>
 
 using namespace std;
 
