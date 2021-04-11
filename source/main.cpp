@@ -17,23 +17,23 @@ int main()
 {
 	system("COLOR E4");
 
-	char yn;
+	char yesOrno;
 	cout << "Welcome, do you want to roll the dice? (y/n): ";
-	cin >> yn;
+	cin >> yesOrno;
 
-	if (yn == 'y' || yn == 'Y') {
+	if (yesOrno == 'y' || yesOrno == 'Y') {
 		play();
 	}
 
-	else if (yn == 'n' || yn == 'N') {
+	else if (yesOrno == 'n' || yesOrno == 'N') {
 		char out;
 		cout << "\nWould you like to leave the game? (y/n): ";
-		cin >> out;
-		if (out == 'y' || out == 'Y') {
+		cin >> outGame;
+		if (outGame == 'y' || outGame == 'Y') {
 			cout << "\nLeaving the game . . .\n";
 			exit(0);
 		}
-		else if (out == 'n' || out == 'N') {
+		else if (outGame == 'n' || outGame == 'N') {
 			cout << "\nOk, starting again...\n\n";
 			main();
 		}
@@ -52,20 +52,20 @@ void play()
 	system("COLOR E4");
 	srand((unsigned)time(0));
 	
-	char agn;
+	char startAgain;
 
 	int random = (rand() % 6) + 1;
 
 	cout << "\nYour number is: " << random << "\n";
 
 	cout << "\nDo you want to roll again? (y/n): ";
-	cin >> agn;
+	cin >> startAgain;
 
-	if (agn == 'y' || agn == 'Y')
+	if (startAgain == 'y' || startAgain == 'Y')
 	{
 		playagn();
 	}
-	else if(agn == 'n' || agn == 'N')
+	else if(startAgain == 'n' || startAgain == 'N')
 	{
 		cout << "\nLeaving game . . .\n";
 		exit(0);
@@ -75,20 +75,20 @@ void play()
 void playagn()
 {
 	system("COLOR E4");
-	char roll;
+	char rollAgain;
 
 	cout << "\nPress 'r' to roll the dice: ";
-	cin >> roll;
-	if (roll == 'r' || roll == 'R')
+	cin >> rollAgain;
+	if (rollAgain == 'r' || rollAgain == 'R')
 	{
 		play();
 	}
 	else
 	{
-		char pagn;
+		char pressAgain;
 
 		cout << "\nYou didn't press 'r', try again: ";
-		cin >> pagn;
+		cin >> pressAgain;
 		play();
 	}
 }
